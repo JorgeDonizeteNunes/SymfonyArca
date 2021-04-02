@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+{% block title %}Listagem da Empresa{% endblock %}
+
+{% block body %}
+  <h1>Listagem das Empresas</h1>
+  empresa {{empresa}} código {{cod}}
+
+  {#comentario#}
+
+  {% if empresa == 'Webmobby'%}
+    <br> Beleza mostra <b>{{empresa}}</b>
+  {%endif%}
+  <br>
+  {% for nome in empresas%}
+    {{nome}}<br>
+  {% endfor %}
+{% endblock %}

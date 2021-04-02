@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+{% block title %}
+  Sign in
+{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript" src="./js/jquery/jquery.js"></script>
+  <script type="text/javascript" src="./js/jquery/jquery.validate.js"></script>
+  <script type="text/javascript" src="./js/login.js"></script>
+{% endblock %}
+
+{% block body %}
+<div id="container">
+		<div id="header">
+			<div class="div1">
+				<img src="./img/logo.svg" alt="arca solutions"/>
+			</div>
+		</div>
+		<div id="content">
+      <h1>Please Login To access The System</h1>
+			<div id="msg_erro">&nbsp;</div>
+      <form action="" method="post" name="frm_login" id="frm_login">
+			  <div class="content">
+				  <div class="contentleft"><img src="./img/btn-cadeado.png" alt="Por favor, digite suas informações." /></div>
+				  <div class="contentright">
+					  <table class="form">
+						  <tr>
+							   <td><input type="text" name="usuario" id="usuario" value="" size="40" placeholder = "Username"></td>
+							</tr>	 
+							<tr>	 
+							   <td><input type="password" name="senha" value="" size="40" placeholder = "Password"></td>
+							</tr>
+              <tr>
+                <td>
+								  <a onclick="$('#frm_login').submit(); return false;" class="btn-button" href="javascript:;"><span>Sign in</span></a>
+									<a onclick="window.location.href='./'" class="btn-button" href="javascript:;"><span>Return</span></a>
+							  </td>
+              </tr>	
+						</table>
+					</div>
+				</div>
+			  
+			</form>	
+
+    
+			
+		</div>	
+  </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block title %}
+  About
+{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+{% endblock %}
+
+{% block body %}
+<div id="container">
+		<div id="header">
+			<div class="div1">
+				<img src="../img/logo.svg" alt="arca solutions"/>
+			</div>
+		</div>
+		<div id="content">
+      <h1>Business Finder</h1>
+			<div id="resultados">
+				 <div class="detalhes">
+				   <h3>Nome da Empresa</h3>
+			     <span style="top:-18px; position:relative;">Categoria</span>				   
+					 <h4>About</h4>
+					 <span class="descricao">Descrição</span></br>
+					 <span class="descricao">Castelo Branco, 20-66 Bauru/SP</span><br>
+					 <span class="descricao">Telefone: (14)3265-5456</span>
+			   </div>
+			 </div>
+       <p>
+			   <a onclick="window.location.href='../';" class="btn-button" href="javascript:;"><span>Return</span></a>
+				</p>
+		</div>
+  </div>	
+{% endblock %}

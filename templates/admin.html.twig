@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+{% block title %}
+  Business Finder Admin
+{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="./css/style.css" /> 
+{% endblock %}
+
+
+{% block body %}
+<div id="container">
+		<div id="header">
+			<div class="div1">
+				<img src="./img/logo.svg" alt="arca solutions"/>
+			</div>
+		</div>
+		<div id="content">
+      <h1>Business Finder Admin</h1>
+			<div class="detalhes">
+			  <h3>Business 
+			    <a onclick="window.location.href='./add'" class="btn-button" style="float:right; font-size:9pt; padding:6px;" href="javascript:;"><span>Add Business</span></a>
+			  </h3>
+			  <div id="resultados" onclick="window.location.href='about/1';" title="see more">
+		     <ul class="resultados">
+			     <li><span class="cod">1</span> <span class="nomeEmpresa">Nome da Empresa</span></li>
+				   <li><span class="descricao">Descrição</span></li>
+			   <ul>
+        </div>
+    </div>	
+  </div>
+{% endblock %}
