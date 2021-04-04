@@ -3,7 +3,7 @@
   Business Finder Admin
 {% endblock %}
 {% block stylesheets %}
-  <link rel="stylesheet" type="text/css" href="./css/style.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" /> 
 {% endblock %}
 
 
@@ -11,14 +11,14 @@
   <div id="container">
 		<div id="header">
 			<div class="div1">
-				<img src="./img/logo.svg" alt="arca solutions"/>
+				<img src="../../img/logo.svg" alt="arca solutions"/>
 			</div>
 		</div>
 		<div id="content">
       <h1>Business Finder Admin</h1>
 			<div class="detalhes">
 			  <h3>Business 
-			    <a class="btn-button" style="float:right; font-size:9pt; padding:6px;" href="{{ path('add_empresa_new') }}"><span>Add Business</span></a>
+			    <a class="btn" href="{{ path('add_empresa_new') }}"><span>Add Business</span></a>
 			  </h3>
 		   </div>		
 			  {%
@@ -26,18 +26,18 @@
            <div class="detalhes">
               <div id="resultados">
                   <ul class="resultados">
-                    <li>
+                  <li>
                       <span class="cod">{{empresa.id}}</span> 
                       <span class="nomeEmpresa" title="see more" href="{{path('add_empresa_show', {'id': empresa.id}) }}">{{empresa.title}}</span>
-                    </li>
-                    <li><span class="descricao" title="see more" href="{{path('add_empresa_show', {'id': empresa.id}) }}">{{empresa.description}}</span></li>
-                    <li>
+                  </li>
+                  <li><span class="descricao" title="see more" href="{{path('add_empresa_show', {'id': empresa.id}) }}">{{empresa.description}}</span></li>
+                  <li>
                       <a class="btn" href="{{ path('add_empresa_edit', {'id': empresa.id}) }}"><span>edit</span></a>
                       <a class="btn" href="{{ path('add_empresa_show', {'id': empresa.id}) }}"><span>see</span></a>
-                    </li>
-                  <ul>
-                </div>
-						  </div>
+                  </li>
+                <ul>
+              </div>
+						</div>
          {% endfor %}  
       </div>	
     </div>

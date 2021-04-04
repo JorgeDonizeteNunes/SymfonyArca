@@ -33,12 +33,36 @@ $(function() {
     rules: {
       title: {
         required: true
+      },
+      phone: {
+        required: true
+      },
+      zipcode: {
+        required: true
+      },
+      address: {
+        required: true
+      },
+      city: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      description:{
+        required: true
       }
     },
     // define messages para cada campo
 
     messages: {
-      title: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>'
+      title: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>',
+      phone: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>',
+      zipcode: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>',
+      address: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>',
+      city: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>',
+      state: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>',
+      description: '<div class="errortxt"><img class="errorimg" src="../img/error.png" alt="" /></div>'
     }
   });
 });

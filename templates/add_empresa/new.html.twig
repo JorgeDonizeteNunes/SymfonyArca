@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{% block title %}
+  Business Finder Admin
+{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="../../../css/style.css" /> 
+{% endblock %}
+
+{% block body %}
+<div id="container">
+  <div id="header">
+    <div class="div1">
+      <img src="../../../img/logo.svg" alt="arca solutions"/>
+    </div>
+   </div>
+   <div id="content">
+     <h1>Business Finder</h1>
+      {{ include('add_empresa/_form.html.twig') }}
+      <a href="{{ path('add_empresa_index') }}" class="btn">return</a>
+    </div>  
+  </div>  
+{% endblock %}

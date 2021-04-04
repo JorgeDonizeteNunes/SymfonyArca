@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block javascripts %}
-  <script type="text/javascript" src="./js/jquery.js"></script>
-  <script type="text/javascript" src="./js/jquery.validate.js"></script>
+  <script type="text/javascript" src="./js/jquery/jquery.js"></script>
+  <script type="text/javascript" src="./js/jquery/jquery.validate.js"></script>
   <script type="text/javascript" src="./js/index.js"></script>
 {% endblock %}
 
@@ -21,29 +21,36 @@
 		</div>
 		<div id="content">
       <h1>Business Finder</h1>
-			<div id="msg_erro">&nbsp;</div>
-      <form action="" method="post" name="frm_search" id="frm_search">
+			<div id="msg_erro">{{msg_erro}}</div>
+      <form action="/search" method="post" name="frm_search" id="frm_search">
 			  <div class="content">
 				  <div class="contentleft" style="width:60px;"><img src="./img/btn-search.png" alt="O que você está procurando?" /></div>
 				  <div class="contentright">
 					  <div class="form">
-						  <input type="text" name="search" id="search" value="" size="40" placeholder = "What are you looking for?">
+						  <input type="text" name="search" id="search" value="{{search}}" size="40" placeholder = "What are you looking for?">
 						</div>
             <p style="width:100%">						
-						  <a onclick="$('#frm_search').submit(); return false;" class="btn-button" href="javascript:;"><span>Search</span></a></li>
+						  <a onclick="$('#frm_search').submit();return false;" class="btn-button" href="javascript:;"><span>Search</span></a></li>
 						  <a onclick="window.location.href='./login';" class="btn-button" href="javascript:;"><span>Sign in</span></a>
 						</p> 
 					</div>
 				</div>
-				<div class="detalhes">
-					<div id="resultados" onclick="window.location.href='./about/1';" title="see more">
-					 <ul class="resultados">
-						 <li><span class="cod">1</span> <span class="nomeEmpresa">Nome da Empresa</span></li>
-						 <li><span class="descricao">Descrição</span></li>
-					 <ul>
-					</div>
-			  </div>
-			</form>		
-		</div>	
+      </form>
+
+      {%
+			 for empresa in empresas %}
+				<div class="detalhes" title="see more" onclick="window.location.href='/about/{{empresa.id}}'" href="javascript:;">
+					<div id="resultados">
+						<ul class="resultados">
+							<li>
+								<span class="cod">{{empresa.id}}</span> 
+								<span class="nomeEmpresa">{{empresa.title}}</span>
+							</li>
+							<li><span class="descricao">{{empresa.description}}</span></li>
+						<ul>
+					</div>						
+      {% endfor %}
+     </div>
+ 	 </div>	
   </div>
 {% endblock %}

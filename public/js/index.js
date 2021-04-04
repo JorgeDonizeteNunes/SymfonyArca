@@ -9,7 +9,7 @@ $(function() {
   $('#frm_search').validate({
 
     submitHandler: function(form) {
-      xajax_validaLogin(xajax.getFormValues('frm_search'));
+      frm_search.submit();
       return false;
     },
 

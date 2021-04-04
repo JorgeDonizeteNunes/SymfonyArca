@@ -21,8 +21,8 @@
 		</div>
 		<div id="content">
       <h1>Please Login To access The System</h1>
-			<div id="msg_erro">&nbsp;</div>
-      <form action="" method="post" name="frm_login" id="frm_login">
+			<div id="msg_erro">{{error}}</div>
+      <form action="logar" method="post" name="frm_login" id="frm_login">
 			  <div class="content">
 				  <div class="contentleft"><img src="./img/btn-cadeado.png" alt="Por favor, digite suas informações." /></div>
 				  <div class="contentright">
@@ -41,12 +41,8 @@
               </tr>	
 						</table>
 					</div>
-				</div>
-			  
+				</div>			  
 			</form>	
-
-    
-			
 		</div>	
   </div>
 {% endblock %}

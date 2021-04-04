@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-<div id="container">
+ <div id="container">
 		<div id="header">
 			<div class="div1">
 				<img src="../img/logo.svg" alt="arca solutions"/>
@@ -15,18 +15,18 @@
 		</div>
 		<div id="content">
       <h1>Business Finder</h1>
+			<div id="msg_erro">{{error}}</div>
 			<div id="resultados">
 				 <div class="detalhes">
-				   <h3>Nome da Empresa</h3>
-			     <span style="top:-18px; position:relative;">Categoria</span>				   
-					 <h4>About</h4>
-					 <span class="descricao">Descrição</span></br>
-					 <span class="descricao">Castelo Branco, 20-66 Bauru/SP</span><br>
-					 <span class="descricao">Telefone: (14)3265-5456</span>
+				   <h3>{{empresa.title}}</h3>
+			     <h4>About</h4>
+					 <span class="descricao">{{empresa.description}}</span></br>
+					 <span class="descricao">{{empresa.address}} {{empresa.city}}/{{empresa.state}}</span><br>
+					 <span class="descricao">Telefone: {{empresa.phone}}</span>
 			   </div>
 			 </div>
        <p>
-			   <a onclick="window.location.href='../';" class="btn-button" href="javascript:;"><span>Return</span></a>
+			   <a onclick="window.history.back();" class="btn-button" href="javascript:;"><span>Return</span></a>
 				</p>
 		</div>
   </div>	
